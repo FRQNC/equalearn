@@ -22,4 +22,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/add-post', [PostController::class, 'addPostView'])->name('post.addView');
     Route::post('/post/add-post', [PostController::class, 'addPost'])->name('post.add');
     Route::post('/post/rate-post', [PostController::class, 'ratePost'])->name('post.rate');
+    Route::delete('/post/delete-post', [PostController::class, 'deletePost'])->name('post.delete');
 });

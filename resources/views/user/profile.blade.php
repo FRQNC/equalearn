@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Equalearn | Read Post</title>
+    <title>Equalearn | Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -13,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>{{$user->username}} Profile</h1>
+                <h1>{{$user->username}}'s Profile</h1>
             </div>
         </div>
         <div class="row">
@@ -40,7 +41,7 @@
                         <td>{{$p->topic->name}}</td>
                         @if (Auth::check() && Auth::user()->id == $user->id)
                         <td><a href="{{ '/@' . $user->username . '/' . $p->title . '/edit' }}">Edit</a></td>
-                        <td><a href="{{ '/@' . $user->username . '/' . $p->title . '/delete' }}">Delete</a></td>
+                        <td><button class="btn btn-danger" onclick="deletePost('{{$p->id}}', '{{$p->user_id}}')">Delete</button></td>
                         @endif
                     </tr>
                     @endforeach

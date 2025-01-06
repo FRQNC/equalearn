@@ -292,6 +292,25 @@ class PostController extends Controller
 
         return response()->json(['message' => $message]);
     }
+
+    public function deletePost(Request $request)
+    {
+        $user = Auth::user();
+
+        if ($user && $user->id == $request->creator_id) {
+            $post = Post::find($request->post_id);
+
+            if ($post) {
+                $post->delete();
+                return response()->json(['message' => 'Post deleted successfully.'], 200);
+            } else {
+                return response()->json(['error' => 'Post not found.'], 404);
+            }
+        } else {
+            return response()->json(['error' => 'Unauthorized action.'], 403);
+        }
+    }
+
     /* TODO
     - Add edit post functionality
     - Add delete post functionality
