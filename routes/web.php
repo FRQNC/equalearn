@@ -24,3 +24,38 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/post/rate-post', [PostController::class, 'ratePost'])->name('post.rate');
     Route::delete('/post/delete-post', [PostController::class, 'deletePost'])->name('post.delete');
 });
+
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/article', function () {
+    return view('article');
+})->name('article');
+
+Route::get('/article-detail', function () {
+    return view('article-detail');
+})->name('article-detail');
+
+Route::get('/events', function () {
+    return view('events');
+})->name('events');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');
+
+// Route::get('/login2', function () {
+//     return view('auth.login2');
+// })->name('login2');
+
+// Route::get('/register2', function () {
+//     return view('auth.register2');
+// })->name('register2');
+
+

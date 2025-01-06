@@ -26,7 +26,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
         ]);
-        
+
 
         // Hash the password before saving
         $data['password'] = Hash::make($data['password']);
@@ -84,7 +84,7 @@ class UserController extends Controller
         return response()->json(['message' => 'User deleted successfully']);
     }
 
-    
+
     public function loginView(){
         return view('auth.login', ['title' => "Login"]);
     }
