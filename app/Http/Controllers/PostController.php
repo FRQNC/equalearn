@@ -424,11 +424,6 @@ class PostController extends Controller
         }
     }
 
-    /* TODO
-    - Add edit post functionality
-    - Add delete post functionality
-    - Add comments?
-    */
 
     public function getDataByMonth(Request $request)
     {

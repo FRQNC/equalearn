@@ -14,7 +14,18 @@ class UserController extends Controller
 {
 
     public function indexPage(){
-        return view('landing');
+        $popularPosts = $this->getPopularPost();
+        return view('landing', ["posts" => $popularPosts]);
+    }
+
+    public function getPopularPost()
+    {
+        // Fetch top 10 posts sorted by like count in descending order
+        $popularPosts = Post::with(['user', 'grade', 'topic'])
+            ->orderBy('like_data->like_count', 'desc')
+            ->take(10)
+            ->get();
+        return $popularPosts;
     }
 
     public function addUser(Request $request)

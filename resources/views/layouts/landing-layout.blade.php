@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Index - Mentor Bootstrap Template</title>
@@ -25,6 +26,7 @@
   <link href="{{ asset('assets/landing/vendor/aos/aos.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/landing/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/landing/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- Main CSS File -->
   <link href="{{ asset('assets/landing/css/main.css') }}" rel="stylesheet">
@@ -78,9 +80,12 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
+      @if(!Auth::check())
       <a class="btn-getstarted" href="{{ route('login') }}">Sign In</a>
       <a class="btn-getstarted" href="{{ route('register') }}">Register</a>
+      @else
+      <a class="btn-getstarted" href="{{'/@'. Auth::user()->username}}">Profile</a>
+      @endif
 
     </div>
   </header>

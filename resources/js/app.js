@@ -28,3 +28,11 @@ window.deletePost = async function(id, creator_id) {
         alert('Failed to delete the post. Please try again.');
     }
 };
+
+window.goToPost = (address) => {
+    if (address && typeof address === 'string') {
+        window.location.href = '@'+address; // Redirects the browser to the specified address
+    } else {
+        console.error('Invalid address provided');
+    }
+};
