@@ -88,7 +88,7 @@
         <div class="sidebar">
             <div class="profile-header">
                 <h1>{{ $user->username }}'s profile</h1>
-                <img src="{{ asset('storage/' . $user->photo) }}" alt="profile Image" class="mx-auto d-flex my-2">
+                <img src="{{ asset('storage/post_images/' . $user->photo) }}" alt="profile Image" class="mx-auto d-flex my-2">
                 <p>{{ $user->fullname }}</p>
                 <p>{{ $user->institution }}</p>
                 <p>{{ $user->bio }}</p>
