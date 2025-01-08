@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
-use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get('/', [UserController::class, 'indexPage'])->name('landing');
@@ -49,6 +49,8 @@ Route::get('/contact', function () {
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
+
+Route::get('/profile/{id}', [ProfileController::class, 'show']);
 
 // Route::get('/login2', function () {
 //     return view('auth.login2');
