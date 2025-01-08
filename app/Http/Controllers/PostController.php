@@ -14,6 +14,8 @@ use App\Models\Grades;
 use App\Models\Topics;
 use App\Models\Tags;
 
+use Carbon\Carbon;
+
 use Illuminate\Support\Facades\Log;
 
 class PostController extends Controller
@@ -316,4 +318,46 @@ class PostController extends Controller
     - Add delete post functionality
     - Add comments?
     */
+
+    public function getDataByMonth(Request $request)
+    {
+        $year = $request->get('year', Carbon::now()->year); // Default tahun sekarang
+        $month = $request->get('month', Carbon::now()->month); // Default bulan sekarang
+
+        // Ambil semua post sesuai bulan dan tahun
+        $posts = Post::whereYear('created_at', $year)
+            ->whereMonth('created_at', $month)
+            ->get();
+
+        // Ambil topic berdasarkan topic_id yang ada di posts
+        $topicIds = $posts->pluck('topic_id')->unique(); // Ambil topic_id yang unik
+        $topics = Topics::whereIn('_id', $topicIds)
+            ->get()
+            ->map(function ($topic) use ($posts) {
+                $topic->post_count = $posts->where('topic_id', $topic->_id)->count(); // Hitung jumlah post per topic
+                return $topic;
+            });
+
+        // Ambil grade berdasarkan grade_id yang ada di posts
+        $gradeIds = $posts->pluck('grade_id')->unique(); // Ambil grade_id yang unik
+        $grades = Grades::whereIn('_id', $gradeIds)
+            ->get()
+            ->map(function ($grade) use ($posts) {
+                $grade->post_count = $posts->where('grade_id', $grade->_id)->count(); // Hitung jumlah post per grade
+                return $grade;
+            });
+
+        // Hitung jumlah unique user berdasarkan user_id
+        $uniqueUsersCount = $posts->pluck('user_id')->unique()->count();
+
+        return view('admin.dashboard', [
+            'year' => $year,
+            'month' => $month,
+            'post_count' => $posts->count(), // Jumlah post pada bulan & tahun tertentu
+            'unique_users_count' => $uniqueUsersCount, // Jumlah user yang unik
+            'topics' => $topics, // Data topic (dengan post_count)
+            'grades' => $grades, // Data grade (dengan post_count)
+            'topic_count' => $topics->count(), // Jumlah topic
+        ]);
+    }
 }

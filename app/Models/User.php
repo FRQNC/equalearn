@@ -9,11 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Jenssegers\Mongodb\Eloquent\Model;
 
-class User extends Model
-{
-    protected $collection = 'users';
-    protected $fillable = ['name', 'followers', 'description'];
-}
+// class User extends Model
+// {
+//     protected $collection = 'users';
+//     protected $fillable = ['name', 'followers', 'description'];
+// }
 
 class User extends Authenticatable
 {

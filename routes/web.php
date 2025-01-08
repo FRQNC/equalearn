@@ -5,6 +5,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 
+use App\Http\Middleware\RedirectIfAuthenticated;
+use Carbon\Carbon;
 
 Route::get('/', [UserController::class, 'indexPage'])->name('landing');
 Route::get('/register', [UserController::class, 'registerView'])->name('register')->middleware(RedirectIfAuthenticated::class);
@@ -46,9 +48,10 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->name('dashboard');
+
+
+Route::get('/dashboard', [PostController::class, 'getDataByMonth'])->name('dashboard');
+
 
 Route::get('/profile/{id}', [ProfileController::class, 'show']);
 
