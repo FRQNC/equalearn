@@ -295,6 +295,117 @@ class PostController extends Controller
         return response()->json(['message' => $message]);
     }
 
+    public function editPostView($username, $id){
+        $user = Auth::user();
+        if($user->username != $username) return false;
+        $post = Post::where('user_id', $user->id)
+            ->where('id', $id)
+            ->with('grade', 'topic', 'user')
+            ->first();
+
+        if (!$post) {
+            return redirect()->route('post.view')->with('error', 'Post not found');
+        }
+
+        $tags = $post->tags;
+        $grades = Grades::all();
+        $topics = Topics::all();
+
+        return view('post.editPost', [
+            'post' => $post,
+            'author' => $post->user->username,
+            'grade' => $post->grade,
+            'topic' => $post->topic,
+            'grades' => $grades,
+            'topics' => $topics,
+            'tags' => $tags,
+        ]);
+
+    }
+
+    public function editPost(Request $request)
+{
+    $user = Auth::user();
+
+    // Validate the request data
+    $validator = Validator::make($request->all(), [
+        'post_id' => 'required|exists:posts,id',
+        'post_title' => 'required|string|max:255',
+        'post_content' => 'required|json',
+        'tags' => 'nullable|string',
+        'topic' => 'required|exists:topics,id',
+        'grade' => 'required|exists:grades,id',
+    ]);
+
+    if ($validator->fails()) {
+        return redirect()->back()->withErrors($validator)->withInput();
+    }
+
+    $post = Post::find($request->post_id);
+
+    // Check if the authenticated user owns the post
+    if ($post->user_id !== $user->id) {
+        return redirect()->back()->with('error', 'Unauthorized action.');
+    }
+
+    // Save old references for count adjustment
+    $oldGradeId = $post->grade_id;
+    $oldTopicId = $post->topic_id;
+    $oldTagIds = $post->tags_id;
+
+    // Update post data
+    $post->title = $request->input('post_title');
+    $post->content = json_decode($request->input('post_content'), true);
+    $post->topic_id = $request->input('topic');
+    $post->grade_id = $request->input('grade');
+
+    // Parse the tags
+    $tags = explode(',', $request->input('tags'));
+    $newTagIds = [];
+    foreach ($tags as $tagName) {
+        $tagName = trim($tagName);
+        if (!empty($tagName)) {
+            $tag = Tags::where('name', $tagName)->first();
+            if ($tag) {
+                if (!in_array($tag->id, $oldTagIds)) {
+                    $tag->count += 1;
+                    $tag->save();
+                }
+            } else {
+                $tag = Tags::create(['name' => $tagName, 'count' => 1]);
+            }
+            $newTagIds[] = $tag->id;
+        }
+    }
+
+    // Decrement old tag counts
+    foreach ($oldTagIds as $oldTagId) {
+        if (!in_array($oldTagId, $newTagIds)) {
+            $tag = Tags::find($oldTagId);
+            if ($tag) {
+                $tag->count -= 1;
+                $tag->save();
+            }
+        }
+    }
+
+    $post->tags_id = $newTagIds;
+    $post->save();
+
+    // Adjust counts only if changed
+    if ($oldGradeId != $post->grade_id) {
+        Grades::find($oldGradeId)?->decrement('count');
+        Grades::find($post->grade_id)?->increment('count');
+    }
+    if ($oldTopicId != $post->topic_id) {
+        Topics::find($oldTopicId)?->decrement('count');
+        Topics::find($post->topic_id)?->increment('count');
+    }
+
+    return redirect()->route('post.view', ["username" => $user->username, "post_title" => $post->title]);
+}
+
+
     public function deletePost(Request $request)
     {
         $user = Auth::user();

@@ -88,7 +88,7 @@
         <div class="sidebar">
             <div class="profile-header">
                 <h1>{{ $user->username }}'s profile</h1>
-                <img src="{{ asset('storage/' . $user->photo) }}" alt="profile Image" class="post-img">
+                <img src="{{ asset('storage/' . $user->photo) }}" alt="profile Image" class="mx-auto d-flex my-2">
                 <p>{{ $user->fullname }}</p>
                 <p>{{ $user->institution }}</p>
                 <p>{{ $user->bio }}</p>
@@ -118,7 +118,7 @@
                                 <td>{{ $p->grade->name }}</td>
                                 <td>{{ $p->topic->name }}</td>
                                 @if (Auth::check() && Auth::user()->id == $user->id)
-                                    <td><a href="{{ '/@' . $user->username . '/' . $p->title . '/edit' }}">Edit</a>
+                                    <td><a href="{{ '/@' . $user->username . '/edit/' . $p->id }}" class="btn btn-primary">Edit</a>
                                     </td>
                                     <td><button class="btn btn-danger"
                                             onclick="deletePost('{{ $p->id }}', '{{ $p->user_id }}')">Delete</button>
