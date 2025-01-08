@@ -45,15 +45,22 @@
             <h5>Register</h5>
           </div>
           <div class="card-body">
-            <form role="form">
+            <form role="form" method="POST" action="/register/process">
+              @csrf
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+                <input type="text" name="username" id="usernameInput" onkeyup="return forceLower(this);" class="form-control" placeholder="Username" aria-label="username">
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                <input type="text" name="fullname" id="fullnameInput" class="form-control" placeholder="Full Name" aria-label="full_name">
               </div>
               <div class="mb-3">
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password">
+                <input type="date" name="birthday" id="birthdayInput" class="form-control" placeholder="" aria-label="birthday">
+              </div>
+              <div class="mb-3">
+                <input type="email" name="email" id="emailInput" class="form-control" placeholder="Email" aria-label="email">
+              </div>
+              <div class="mb-3">
+                <input type="password" name="password" id="passwordInput" class="form-control" placeholder="Password" aria-label="password">
               </div>
               <div class="form-check form-check-info text-start">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
@@ -62,7 +69,7 @@
                 </label>
               </div>
               <div class="text-center">
-                <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+                <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
               </div>
               <p class="text-sm mt-3 mb-0">Already have an account? <a href="javascript:;" class="text-dark font-weight-bolder">Sign in</a></p>
             </form>
@@ -71,4 +78,9 @@
       </div>
     </div>
   </div>
+  <script>
+    function forceLower(strInput) {
+        strInput.value = strInput.value.toLowerCase();
+    }
+  </script>
 @endsection
