@@ -8,7 +8,7 @@
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-8">
                 <h1>About Us<br></h1>
-                <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                <p class="mb-0"></p>
               </div>
             </div>
           </div>
@@ -35,15 +35,17 @@
             </div>
 
             <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-              <h3>Voluptatem dignissimos provident quasi corporis</h3>
+              <h3>Tentang Equalearn</h3>
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Equalearn adalah platform kursus online yang bertujuan memberikan pengalaman belajar yang fleksibel dan berkualitas tinggi.
+                Dengan berbagai pilihan kursus yang terpersonalisasi, instruktur berpengalaman, dan fitur pembelajaran interaktif,
+                kami membantu Anda mengembangkan keterampilan dan mencapai tujuan pendidikan secara efisien.
+                Di Equalearn, setiap orang dapat belajar dengan cara mereka sendiri, kapan saja dan di mana saja, dengan dukungan penuh untuk mencapai potensi terbaik mereka.
               </p>
               <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Fokus pada Kualitas Pendidikan</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Fleksibilitas dalam Pembelajaran</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Solusi Pembelajaran Terintegrasi untuk Setiap Individu</span></li>
               </ul>
             </div>
 

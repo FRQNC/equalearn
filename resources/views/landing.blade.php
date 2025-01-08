@@ -8,7 +8,7 @@
 
     <div class="container">
       <h2 data-aos="fade-up" data-aos-delay="100">Learning Today,<br>Leading Tomorrow</h2>
-      <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
+      <p data-aos="fade-up" data-aos-delay="200"></p>
       <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
         <a href="courses.html" class="btn-get-started">Get Started</a>
       </div>
@@ -28,15 +28,14 @@
         </div>
 
         <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-          <h3>Voluptatem dignissimos provident quasi corporis</h3>
+          <h3>Transformasikan cara Anda belajar dengan Equalearn</h3>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Platform kursus online yang menyediakan pengalaman belajar yang fleksibel, interaktif, dan berfokus pada kualitas pendidikan. Bergabunglah dengan Equalearn dan mulai perjalanan pembelajaran Anda sekarang.
           </p>
           <ul>
-            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>kursus yang dapat disesuaikan dengan kebutuhan dan tujuan belajar setiap individu, memberikan pengalaman belajar yang lebih relevan dan efektif.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Anda akan belajar dari para ahli dan praktisi yang berpengalaman di bidangnya, memastikan materi yang diajarkan tidak hanya teoritis tetapi juga aplikatif.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Equalearn kami dilengkapi dengan fitur-fitur seperti diskusi langsung, kuis, dan tugas yang membantu meningkatkan keterlibatan dan pemahaman materi bagi para peserta didik.</span></li>
           </ul>
           <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
         </div>
@@ -97,10 +96,10 @@
 
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="why-box">
-            <h3>Why Choose Our Products?</h3>
+            <h3>Mengapa harus Equalearn?</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                Karena kami memberikan pengalaman belajar yang fleksibel, dipandu oleh instruktur ahli, dan
+                didukung oleh fitur interaktif yang membuat pembelajaran lebih efektif!
             </p>
             <div class="text-center">
               <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
@@ -114,24 +113,24 @@
             <div class="col-xl-4">
               <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                 <i class="bi bi-clipboard-data"></i>
-                <h4>Corporis voluptates officia eiusmod</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <h4>Kurikulum Terpersonalisasi dan Terstruktur</h4>
+                <p>Kursus yang disesuaikan dengan tujuan belajar Anda</p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
               <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                 <i class="bi bi-gem"></i>
-                <h4>Ullamco laboris ladore pan</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <h4>Instruktur Profesional</h4>
+                <p>Belajar langsung dari para ahli berpengalaman</p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
               <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                 <i class="bi bi-inboxes"></i>
-                <h4>Labore consequatur incidid dolore</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <h4>Pembelajaran Interaktif</h4>
+                <p>Fitur-fitur yang meningkatkan keterlibatan dan pemahaman</p>
               </div>
             </div><!-- End Icon Box -->
 
@@ -154,84 +153,84 @@
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="features-item">
             <i class="bi bi-eye" style="color: #ffbb2c;"></i>
-            <h3><a href="" class="stretched-link">Lorem Ipsum</a></h3>
+            <h3><a href="" class="stretched-link">Web Devleopment</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="features-item">
             <i class="bi bi-infinity" style="color: #5578ff;"></i>
-            <h3><a href="" class="stretched-link">Dolor Sitema</a></h3>
+            <h3><a href="" class="stretched-link">UI/UX Design</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="features-item">
             <i class="bi bi-mortarboard" style="color: #e80368;"></i>
-            <h3><a href="" class="stretched-link">Sed perspiciatis</a></h3>
+            <h3><a href="" class="stretched-link">Data Science</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
           <div class="features-item">
             <i class="bi bi-nut" style="color: #e361ff;"></i>
-            <h3><a href="" class="stretched-link">Magni Dolores</a></h3>
+            <h3><a href="" class="stretched-link">Cloud Computing</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
           <div class="features-item">
             <i class="bi bi-shuffle" style="color: #47aeff;"></i>
-            <h3><a href="" class="stretched-link">Nemo Enim</a></h3>
+            <h3><a href="" class="stretched-link">Marketing & SEO</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
           <div class="features-item">
             <i class="bi bi-star" style="color: #ffa76e;"></i>
-            <h3><a href="" class="stretched-link">Eiusmod Tempor</a></h3>
+            <h3><a href="" class="stretched-link">Cybersecurity</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
           <div class="features-item">
             <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
-            <h3><a href="" class="stretched-link">Midela Teren</a></h3>
+            <h3><a href="" class="stretched-link">Project Management</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
           <div class="features-item">
             <i class="bi bi-camera-video" style="color: #4233ff;"></i>
-            <h3><a href="" class="stretched-link">Pira Neve</a></h3>
+            <h3><a href="" class="stretched-link">Video Editing</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
           <div class="features-item">
             <i class="bi bi-command" style="color: #b2904f;"></i>
-            <h3><a href="" class="stretched-link">Dirada Pack</a></h3>
+            <h3><a href="" class="stretched-link">Artificial Intelligence (AI)</a></a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
           <div class="features-item">
             <i class="bi bi-dribbble" style="color: #b20969;"></i>
-            <h3><a href="" class="stretched-link">Moton Ideal</a></h3>
+            <h3><a href="" class="stretched-link">Machine Learning</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
           <div class="features-item">
             <i class="bi bi-activity" style="color: #ff5828;"></i>
-            <h3><a href="" class="stretched-link">Verdo Park</a></h3>
+            <h3><a href="" class="stretched-link">Mobile Apps Development</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
           <div class="features-item">
             <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
-            <h3><a href="" class="stretched-link">Flavor Nivelanda</a></h3>
+            <h3><a href="" class="stretched-link">Copywriting</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
