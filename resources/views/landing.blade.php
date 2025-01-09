@@ -30,13 +30,14 @@
         <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
           <h3>Transformasikan cara Anda belajar dengan Equalearn</h3>
           <p class="fst-italic">
-            Platform kursus online yang menyediakan pengalaman belajar yang fleksibel, interaktif, dan berfokus pada kualitas pendidikan. Bergabunglah dengan Equalearn dan mulai perjalanan pembelajaran Anda sekarang.
-          </p>
-          <ul>
-            <li><i class="bi bi-check-circle"></i> <span>kursus yang dapat disesuaikan dengan kebutuhan dan tujuan belajar setiap individu, memberikan pengalaman belajar yang lebih relevan dan efektif.</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Anda akan belajar dari para ahli dan praktisi yang berpengalaman di bidangnya, memastikan materi yang diajarkan tidak hanya teoritis tetapi juga aplikatif.</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Equalearn kami dilengkapi dengan fitur-fitur seperti diskusi langsung, kuis, dan tugas yang membantu meningkatkan keterlibatan dan pemahaman materi bagi para peserta didik.</span></li>
-          </ul>
+            Platform berbagi materi online yang menyediakan pengalaman berbagi pengetahuan secara fleksibel, interaktif, dan berfokus pada kualitas konten. Bergabunglah dengan Equalearn dan mulai perjalanan berbagi wawasan Anda sekarang.
+        </p>
+        <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Materi yang dapat disesuaikan dengan kebutuhan dan minat pembaca, memberikan pengalaman membaca yang lebih relevan dan bermanfaat.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Anda dapat belajar dan berbagi dari para penulis serta praktisi berpengalaman di bidangnya, memastikan konten yang dibagikan tidak hanya teoritis tetapi juga aplikatif.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Equalearn kami dilengkapi dengan fitur-fitur seperti like, dan analitik untuk membantu meningkatkan keterlibatan dan dampak materi yang dibagikan.</span></li>
+        </ul>
+        
           <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
         </div>
 
@@ -46,7 +47,7 @@
 
   </section><!-- /About Section -->
 
-  <!-- Counts Section -->
+  {{-- <!-- Counts Section -->
   <section id="counts" class="section counts light-background">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -85,9 +86,9 @@
 
     </div>
 
-  </section><!-- /Counts Section -->
+  </section><!-- /Counts Section --> --}}
 
-  <!-- Why Us Section -->
+  {{-- <!-- Why Us Section -->
   <section id="why-us" class="section why-us">
 
     <div class="container">
@@ -399,7 +400,7 @@
               </div>
             </div>
           </div>
-        </div><!-- End Team Member -->
+        </div><!-- End Team Member --> --}}
 
       </div>
 

@@ -37,16 +37,16 @@
             <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
               <h3>Tentang Equalearn</h3>
               <p class="fst-italic">
-                Equalearn adalah platform kursus online yang bertujuan memberikan pengalaman belajar yang fleksibel dan berkualitas tinggi.
-                Dengan berbagai pilihan kursus yang terpersonalisasi, instruktur berpengalaman, dan fitur pembelajaran interaktif,
-                kami membantu Anda mengembangkan keterampilan dan mencapai tujuan pendidikan secara efisien.
-                Di Equalearn, setiap orang dapat belajar dengan cara mereka sendiri, kapan saja dan di mana saja, dengan dukungan penuh untuk mencapai potensi terbaik mereka.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Fokus pada Kualitas Pendidikan</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Fleksibilitas dalam Pembelajaran</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Solusi Pembelajaran Terintegrasi untuk Setiap Individu</span></li>
-              </ul>
+                Equalearn adalah platform berbagi materi online yang bertujuan memberikan pengalaman berbagi pengetahuan yang fleksibel dan berkualitas tinggi.
+                Dengan berbagai pilihan konten yang terpersonalisasi, penulis berpengalaman, dan fitur interaktif, kami membantu Anda berbagi wawasan
+                dan menemukan ide-ide baru secara efisien. Di Equalearn, setiap orang dapat berbagi dan belajar dengan cara mereka sendiri, kapan saja dan di mana saja,
+                dengan dukungan penuh untuk mencapai dampak terbaik dari konten yang mereka bagikan.
+            </p>
+            <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Fokus pada Kualitas Konten</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Fleksibilitas dalam Berbagi dan Membaca</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Solusi Berbagi Pengetahuan yang Terintegrasi untuk Semua Pengguna</span></li>
+            </ul>
             </div>
 
           </div>
@@ -56,7 +56,7 @@
       </section><!-- /About Us Section -->
 
       <!-- Counts Section -->
-      <section id="counts" class="section counts light-background">
+      {{-- <section id="counts" class="section counts light-background">
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -231,6 +231,6 @@
 
         </div>
 
-      </section><!-- /Testimonials Section -->
+      </section><!-- /Testimonials Section --> --}}
 
 @endsection
