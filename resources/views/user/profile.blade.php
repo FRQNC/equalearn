@@ -90,14 +90,14 @@
         <div class="sidebar">
             <div class="profile-header">
                 <h1>{{ $user->username }}'s profile</h1>
-                <img src="{{ asset('storage/post_images/' . $user->photo) }}" alt="profile Image"
+                <img src="{{ asset('storage/' . $user->photo) }}" alt="profile Image"
                     class="mx-auto d-flex my-2">
                 <p>{{ $user->fullname }}</p>
                 <p>{{ $user->institution }}</p>
                 <p>{{ $user->bio }}</p>
                 @if (Auth::check() && Auth::user()->id == $user->id)
-                <a href="{{ route('logout')}}" class="btn btn-danger">Logout</a>
-                    
+                <a href="/logout" class="btn btn-danger"><i class='bx bx-log-out bx-flip-horizontal' ></i>Log out</a>
+
                 @endif
             </div>
         </div>
@@ -138,7 +138,6 @@
                 </table>
                 @if (Auth::check() && Auth::user()->id == $user->id)
                     <a href="{{ route('post.addView') }}" class="btn btn-primary">Buat post</a><br><br>
-                    <a href="/logout" class="btn btn-danger"><i class='bx bx-log-out bx-flip-horizontal' ></i>Log out</a>
                 @endif
             </div>
         </div>
