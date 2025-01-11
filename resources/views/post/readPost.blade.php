@@ -137,9 +137,7 @@
         window.fetchLinkUrl = "{{ route('post.fetchLink') }}";
         window.postId = "{{$post->id}}"
         window.rateUrl = "{{ route('post.rate') }}"
-        window.postContent = {
-            !!json_encode($post - > content) !!
-        }
+        window.postContent = {!!json_encode($post->content) !!}
     </script>
 </body>
 
